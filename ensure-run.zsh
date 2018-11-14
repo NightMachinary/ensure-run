@@ -7,5 +7,5 @@ res=$?
 if [[ $res -eq 124 ]]; then
     >&2 echo
     >&2 echo "Command '$2' timed out in $1. Rerunning ..."
-    eval "$myInvocation"
+    exec eval "$myInvocation"
 fi
