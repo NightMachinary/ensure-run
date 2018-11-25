@@ -2,7 +2,7 @@
 myInvocation="$(printf %q "${(%):-%x}")$((($#)) && printf ' %q' "$@")"
 echo "$myInvocation"
 
-echo "gtimeout $1 ${@:2}"
+# echo "gtimeout $1 ${@:2:q}"
 eval "gtimeout $1 ${@:2:q}"
 res=$?
 # echo $res
